@@ -5,6 +5,8 @@
 <title>SC^2 Data Viz Example</title>
 <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
 <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.js'></script>
+<script src="http://cdn-geoweb.s3.amazonaws.com/esri-leaflet/1.0.0-rc.3/esri-leaflet.js"></script>
+<script src="https://dl.dropboxusercontent.com/u/59331579/0.7.3/esri-leaflet-renderers-0.0.1-beta.1.min.js"></script>
 <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.css' rel='stylesheet' />
 <style>
   body { margin:0; padding:0; }
@@ -40,15 +42,15 @@
 L.mapbox.accessToken = 'pk.eyJ1IjoiZXNhZ2lzIiwiYSI6ImV3dnkyWjAifQ.SYBjFR-Bw0YDntotGjtZxQ';
 var map = L.mapbox.map('map', null,{
   maxZoom: 18 
-}).setView([48.437059, -122.314396], 13);
+}).setView([48.437059, -122.314396], 12);
 
 var baselayers = {
-      Streets: L.mapbox.tileLayer('mapbox.streets'),
-      Satellite: L.mapbox.tileLayer('mapbox.satellite')
+      Streets: L.mapbox.tileLayer('esagis.mfmh62d6'),
+      Satellite: L.mapbox.tileLayer('esagis.mfme9c69'),
   };
 
   baselayers.Satellite.addTo(map);
-  L.control.layers(baselayers).addTo(map)
+  L.control.layers(baselayers).addTo(map);
 
 var myLayer = L.mapbox.featureLayer().addTo(map);
 
@@ -175,7 +177,11 @@ myLayer.on('layeradd', function(e) {
         minWidth: 500
     });
 });
+//Esri service layer
+/*var route = new L.esri.featureLayer("http://services1.arcgis.com/qDIoVrQGSaQYXp0A/arcgis/rest/services/FEMASkagitFlood/FeatureServer/0",{
 
+  }).addTo(map);
+*/
 // Add features to the map
 myLayer.setGeoJSON(geoJson);
 
