@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<head>
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+<link rel="stylesheet" href="http://leaflet.github.io/Leaflet.draw/leaflet.draw.css"/>
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+<script src="http://leaflet.github.io/Leaflet.draw/leaflet.draw.js"></script>
+
+<meta property='og:title' content='Energize Eastside EIS Scoping Comments' />
+
+<style>
+#map {
+width:860px;
+height:350px;
+margin-left:auto;
+margin-right:auto;
+
+}
+
+body {
+  text-align:left;
+}
+textarea{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 4px;
+}
+
+::-webkit-input-placeholder {
+   color: #000000;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #000000;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #000000;  
+}
+
+:-ms-input-placeholder {  
+   color: #000000;  
+}
+
+#page{
+	width: 860px;
+	margin: 0 auto;
+}
+
+.notes {
+  padding: 4px; 
+  border: solid 1px #C5C5C5;  
+  outline: 0;  
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;  
+  width: 625px;
+  height:100px;
+  padding-top: 10px;
+}
+select {
+  border: solid 1px #C5C5C5;
+  padding:2.5px;
+  outline: 0;  
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+input:hover, textarea:hover,  
+input:focus, textarea:focus {   
+  border-color: #606060;   
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 8px;
+  padding:4px;
+}
+
+button.submit { 
+	
+	width: 150px;  
+    padding:9px;	
+    background: #777777;  
+    border: 0;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;	
+    font-size: 14px;
+    font-weight: bold;  
+    color: #ffffff;  
+    -moz-border-radius: 5px;  
+    -webkit-border-radius: 5px;
+	float:left;
+	margin-right:5px;
+	cursor:pointer;
+	cursor:hand;
+	border-radius: 5px; 
+  
+}
+
+label {
+  display: block;
+  padding-top:8px;
+  width: 300px;
+  text-align:left;
+  margin-right: 10px;
+}
+
+
+.row {
+	clear: both;
+}
+
+.col3{
+	width: 216px;
+	float: left;
+
+}
+.col3top{
+	width: 216px;
+	float: left;
+}
+
+.col1{
+	width: 860px;
+	float: left;
+	padding-top:10px;
+}
+.col1_1{
+	width: 860px;
+	float: left;
+	padding-top: 30px;
+
+}
+ul.a {
+    list-style-type: circle;
+    text-align:left;
+    position: relative;
+    right: -50px;
+}
+a{
+	color:#F04C23;
+
+}
+#entry_987744006{
+	width:350px;
+}
+#entry_2097859402{
+	width:200px;
+}
+
+</style>
+</head>
+
+<body>
+<div id='page'>
+<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"     
+onload="if(submitted) {window.location='http://www.energizeeastsideeis.org/confirmation.html';}"></iframe>
+
+	<form action="https://docs.google.com/a/energizeeastsideeis.org/forms/d/1P9_yNg6dTDUmFXKWECLfx4eiMGunnA3Dg_9YpJnAIiI/formResponse" method="POST" id="ss-form" target="hidden_iframe" onsubmit="submitted=true;">
+				<div class="col3top">
+					<label for="firstname"><strong><font color="#70451c">First Name</font></strong><a>*</a></label>
+					<input id="entry_" placeholder="e.g. Henry" type="text" name="entry." class='ss-q-short' dir="auto" required></input>
+				</div>
+				<div class="col3top">
+					<label for="lastname"><strong><font color="#70451c">Last Name</font></strong><a>*</a></label>
+					<input id="entry_" placeholder="e.g. Yesler" type="text" name="entry." class='ss-q-short' dir="auto" required></input>
+				</div>
+				<div class="col3top">
+					<label for="email"><strong><font color="#70451c">Email</font></strong></label>
+					<input id="entry_" placeholder="e.g. email@email.com" type="text" name="entry." class='ss-q-short' dir="auto"></input>
+				</div>	
+
+			<div class="row">
+				<div class="col3">
+					<label for="address"><strong><font color="#70451c">Address</font></strong><a>*</a></label>
+					<input id="entry_319134438" placeholder="e.g. 1111 Yesler Way" type="text" name="entry.319134438" class='ss-q-short' dir="auto" required></input>
+				</div>
+				<div class="col3">
+					<label for="city"><strong><font color="#70451c">City</font></strong><a>*</a></label>
+					<input type="text" id="entry_1647963291" placeholder="e.g. Seattle"name="entry.1647963291" class='select' required></input>
+				</div>
+				<div class="col3">
+					<label for="zip"><strong><font color="#70451c">Zip</font></strong><a>*</a></label>
+					<input type="text" id="entry_2040199952" placeholder="e.g. 98103" name="entry.2040199952" class='select' required></input>
+				</div>		
+			</div>
+			<div class="row">
+				<div class="col3">
+					<label for="island"><strong><font color="#70451c">Island</font></strong><a>*</a></label>
+					<input id="entry_319134438" placeholder="Saipan" type="text" name="entry.319134438" class='ss-q-short' dir="auto" required></input>
+				</div>
+			<div class="row">
+				<div class="col1_1">
+					<label for="type"><strong><font color="#70451c">What category best fits your comment?</font></strong></label>
+					<select id="entry_987744006" name="entry.987744006"><br>
+						<option selected>-Please Select-</option>
+						<option value="Air quality and greenhouse gas emissions">Air quality and greenhouse gas emissions</option>
+						<option value="EIS Process">EIS Process</option>
+						<option value="Electric and magnetic fields (EMF)">Electric and magnetic fields (EMF)</option>
+						<option value="Energy and natural resources">Energy and natural resources</option>	
+						<option value="Historic and cultural resources">Historic and cultural resources</option>
+						<option value="Views and aesthetics">Views and aesthetics</option>
+						<option value="Land and shoreline use compatibility">Land and shoreline use compatibility</option>
+						<option value="Light and glare">Light and glare</option>
+						<option value="Noise">Noise</option>
+						<option value="Plants and animals">Plants and animals</option>
+						<option value="Public services and utilities">Public services and utilities</option>
+						<option value="Recreation">Recreation</option>
+						<option value="Surface water (streams, wetlands, water quality)">Surface water (streams, wetlands, water quality)</option>
+						<option value="Transportation">Transportation</option>
+						<option value="Other">Other</option>
+
+					</select>
+				</div>
+				<div class="col1">
+					<label for="comment"><strong><font color="#70451c">Comment</font></strong><a>*</a></label>
+					<textarea id="entry_468328249" placeholder="Enter your comment here" name="entry.468328249" class='notes' required></textarea>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col1_1">
+					<label for="updates"><strong><font color="#70451c">Would you like to be kept up to speed?</font></strong></label>
+					<select id="entry_2097859402" name="entry.2097859402" class='select'><br>
+						<option selected>-Please Select-</option>
+						<option value="Email">Yes, Email me</option>
+						<option value="Post">Yes, I prefer standard post</option>
+						<option value="No">No thanks</option>	
+					</select>
+				</div>
+			<div class ="row">
+			<br>
+			</div>
+			<div id="map"></div>
+			<div class ="row">
+				<div class="col1_1">
+				<button onclick="initialize();" class="submit" value="submit" id="submit file" >Submit</button>	
+				</div>
+			</div>
+	</div>
+<input type="hidden" name="entry.1843466499" id="entry_1843466499">
+<input type="hidden" name="entry.2095728529" id="entry_2095728529">		
+</form>
+
+<script>
+
+// Creat variable for Mapbox tiles
+var mapboxTiles = L.tileLayer('http://a.tiles.mapbox.com/v3/kempj2.hb8f15f5/{z}/{x}/{y}.png', {
+    attribution: '<a href="https://www.mapbox.com/" target="_blank">Mapbox</a>'
+});
+//Initialize the map
+var map = L.map('map')
+    .addLayer(mapboxTiles)
+    .setMaxBounds([
+    [21.105000, 154.511719],
+    [9.438224, 137.120361]
+])
+    .setView([15.088367,145.707550], 10);
+
+// define rectangle geographical bounds
+var bounds = [[47.696130, -122.228737], [47.456648, -122.120934]];
+
+// create a dashed rectangle
+//L.rectangle(bounds, {color: "#000000", weight: 3, fill:false, dashArray:('5 5')}).addTo(map);
+
+//Initialize the FeatureGroup to store editable layers
+var drawnItems = new L.FeatureGroup();
+map.addLayer(drawnItems);
+
+// Initialise the draw control and pass it the FeatureGroup of editable layers
+var drawControl = new L.Control.Draw({
+	position: 'topright',
+	draw: {
+		polygon: false,
+		polyline: false,
+		rectangle: false,
+		circle: false,
+		},
+		
+    edit: {
+        featureGroup: drawnItems,
+        edit:false,
+        remove:false
+    	}
+
+});
+var drawnControl = new L.Control.Draw({
+	position: 'topright',
+	draw: {
+		polygon: false,
+		polyline: false,
+		rectangle: false,
+		circle: false,
+		marker:false,
+		},
+		
+    edit: {
+        featureGroup: drawnItems,
+        remove:false
+    	}
+
+});
+
+map.addControl(drawControl);
+
+// adds drawn points to the drawnItems layer
+map.on('draw:created', function (e) {
+        var type = e.layerType,
+            layer = e.layer;
+		drawnItems.addLayer(layer);
+		map.removeControl(drawControl);
+		map.addControl(drawnControl);
+
+	});
+
+//the initialize funcction loades the lat/long from the drawn item
+	function initialize(){
+		$.each( drawnItems._layers, function( key, value ) {
+  		var _lat =  drawnItems._layers[key]._latlng.lat;
+  		var _lng =  drawnItems._layers[key]._latlng.lng;
+		document.getElementById("entry_1843466499").value = _lat;
+		document.getElementById("entry_2095728529").value = _lng;
+	});
+}
+					
+//for changing the thank-you page
+var submitted=false
+ 
+// This function will be called after the Google Script has executed
+  function fileUploaded(status) {
+    document.getElementById('ss-form').style.display = 'none';
+    document.getElementById('output').innerHTML = status;
+  }
+  
+</script>
+
+</html>
