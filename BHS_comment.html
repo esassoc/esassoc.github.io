@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<head>
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+<link rel="stylesheet" href="http://leaflet.github.io/Leaflet.draw/leaflet.draw.css"/>
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+<script src="http://leaflet.github.io/Leaflet.draw/leaflet.draw.js"></script>
+
+<meta property='og:title' content='BHS comment map example' />
+
+<style>
+#map {
+width:860px;
+height:350px;
+margin-left:auto;
+margin-right:auto;
+
+}
+
+body {
+  text-align:left;
+}
+textarea{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 4px;
+}
+
+::-webkit-input-placeholder {
+   color: #000000;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #000000;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #000000;  
+}
+
+:-ms-input-placeholder {  
+   color: #000000;  
+}
+
+#page{
+	width: 860px;
+	margin: 0 auto;
+}
+
+.notes {
+  padding: 4px; 
+  border: solid 1px #C5C5C5;  
+  outline: 0;  
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;  
+  width: 625px;
+  height:100px;
+  padding-top: 10px;
+}
+select {
+  border: solid 1px #C5C5C5;
+  padding:2.5px;
+  outline: 0;  
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+input:hover, textarea:hover,  
+input:focus, textarea:focus {   
+  border-color: #606060;   
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 8px;
+  padding:4px;
+}
+
+button.submit { 
+	
+	width: 150px;  
+    padding:9px;	
+    background: #777777;  
+    border: 0;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;	
+    font-size: 14px;
+    font-weight: bold;  
+    color: #ffffff;  
+    -moz-border-radius: 5px;  
+    -webkit-border-radius: 5px;
+	float:left;
+	margin-right:5px;
+	cursor:pointer;
+	cursor:hand;
+	border-radius: 5px; 
+  
+}
+
+label {
+  display: block;
+  padding-top:8px;
+  width: 300px;
+  text-align:left;
+  margin-right: 10px;
+}
+
+
+.row {
+	clear: both;
+}
+
+.col3{
+	width: 216px;
+	float: left;
+
+}
+.col3top{
+	width: 216px;
+	float: left;
+}
+
+.col1{
+	width: 860px;
+	float: left;
+	padding-top:10px;
+}
+.col1_1{
+	width: 860px;
+	float: left;
+	padding-top: 30px;
+
+}
+ul.a {
+    list-style-type: circle;
+    text-align:left;
+    position: relative;
+    right: -50px;
+}
+a{
+	color:#F04C23;
+
+}
+#entry_987744006{
+	width:350px;
+}
+#entry_2097859402{
+	width:200px;
+}
+
+</style>
+</head>
+
+<body>
+<div id='page'>
+		<h2 class="wsite-content-title" style="text-align:left;">Example comment mapper</h2>
+		<strong><font color="#70451c">Generating public interest in historic resources through web-based comments</font></strong> 
+	<p>
+		This form allows you to submit comments buildings in ballard. This only serves as an example, we could add or remove as many fields as needed. Maybe an address field? Maybe we need to add the locations to the map and let people comment on what they appreciate about them? Maybe this is an internal tool to quickly add a historic location<br> 
+	</p>
+	<br>
+	<strong><font color="#70451c">How it works</font></strong> 
+	<p>
+		This web-based GIS tool was built using <a href="https://www.mapbox.com/">Mapbox</a> and <a href="https://www.google.com/forms/about/">Google forms</a>. Once the information is filled out and submitted the response is logged into a google spreadsheet that is easily accessed by managers, planners, and GIS analyst alike. Check out the backend spreadsheet <a href="https://docs.google.com/spreadsheets/d/1ppAUKHPNZ-NQUU-lOkIRq-DpeUsu75sjKPHiGaXqxLo/edit?usp=sharing">here</a>. after you submit you will be rerouted back to this page, but normally we would route you to a thank you or confirmation page. It's an effective tool and built using free technology   
+	</p>
+	<br>
+
+<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"     
+onload="if(submitted) {window.location='http://www.energizeeastsideeis.org/confirmation.html';}"></iframe>
+
+	<form action="https://docs.google.com/forms/d/1NqGTItbhwKtLDK3HkwN6GvdJt4kZVf_tBB-Cw3l88YU/formResponse" method="POST" id="ss-form" target="hidden_iframe" onsubmit="submitted=true;">
+				<div class="col3top">
+					<label for="firstname"><strong><font color="#70451c">Name of building</font></strong><a>*</a></label>
+					<input id="entry_340748302" placeholder="Building" type="text" name="entry.340748302" class='ss-q-short' dir="auto" required></input>
+				</div>
+			<div class="row">
+				<div class="col1_1">
+					<label for="type"><strong><font color="#70451c">Year constructed</font></strong></label>
+					<select id="entry_2015577548" name="entry.2015577548"><br>
+						<option selected>-Please Select-</option>
+						<option value="1790-1890">1790-1890</option>
+						<option value="1891-1930">1891-1930</option>
+						<option value="1931-1960">1931-1960</option>
+						<option value="1961-2000">1961-2000</option>	
+					</select>
+				</div>
+				<div class="col1">
+					<label for="comment"><strong><font color="#70451c">Character of the historic resource</font></strong><a>*</a></label>
+					<textarea id="entry_2068642469" placeholder="Tell us what historic characteristics you find endearing" name="entry.2068642469" class='notes' required></textarea>
+				</div>
+			</div>
+			<div class ="row">
+			<br>
+			</div>
+			<div id="map"></div>
+			<div class ="row">
+				<div class="col1_1">
+				<button onclick="initialize();" class="submit" value="submit" id="submit file" >Submit</button>	
+				</div>
+			</div>
+	</div>
+<input type="hidden" name="entry.1129958423" id="entry_1129958423">
+<input type="hidden" name="entry.849126843" id="entry_849126843">		
+</form>
+
+<script>
+
+// Creat variable for Mapbox tiles
+var mapboxTiles = L.tileLayer('http://a.tiles.mapbox.com/v3/kempj2.hb8f15f5/{z}/{x}/{y}.png', {
+    attribution: '<a href="https://www.mapbox.com/" target="_blank">Mapbox</a>'
+});
+//Initialize the map
+var map = L.map('map')
+    .addLayer(mapboxTiles)
+    .setMaxBounds([
+    [47.636709, -122.500477],
+    [47.713804, -122.268906]
+])
+    .setView([47.675271,-122.38469], 13);
+
+// define rectangle geographical bounds
+var bounds = [[47.665619, -122.41357], [47.684892, -122.355680]];
+
+// create a dashed rectangle
+L.rectangle(bounds, {color: "#000000", weight: 3, fill:false, dashArray:('5 5')}).addTo(map);
+
+//Initialize the FeatureGroup to store editable layers
+var drawnItems = new L.FeatureGroup();
+map.addLayer(drawnItems);
+
+// Initialise the draw control and pass it the FeatureGroup of editable layers
+var drawControl = new L.Control.Draw({
+	position: 'topright',
+	draw: {
+		polygon: false,
+		polyline: false,
+		rectangle: false,
+		circle: false,
+		},
+		
+    edit: {
+        featureGroup: drawnItems,
+        edit:false,
+        remove:false
+    	}
+
+});
+var drawnControl = new L.Control.Draw({
+	position: 'topright',
+	draw: {
+		polygon: false,
+		polyline: false,
+		rectangle: false,
+		circle: false,
+		marker:false,
+		},
+		
+    edit: {
+        featureGroup: drawnItems,
+        remove:false
+    	}
+
+});
+
+map.addControl(drawControl);
+
+// adds drawn points to the drawnItems layer
+map.on('draw:created', function (e) {
+        var type = e.layerType,
+            layer = e.layer;
+		drawnItems.addLayer(layer);
+		map.removeControl(drawControl);
+		map.addControl(drawnControl);
+
+	});
+
+//the initialize funcction loades the lat/long from the drawn item
+	function initialize(){
+		$.each( drawnItems._layers, function( key, value ) {
+  		var _lat =  drawnItems._layers[key]._latlng.lat;
+  		var _lng =  drawnItems._layers[key]._latlng.lng;
+		document.getElementById("entry_1129958423").value = _lat;
+		document.getElementById("entry_849126843").value = _lng;
+	});
+}
+					
+//for changing the thank-you page
+var submitted=false
+ 
+// This function will be called after the Google Script has executed
+  function fileUploaded(status) {
+    document.getElementById('ss-form').style.display = 'none';
+    document.getElementById('output').innerHTML = status;
+  }
+  
+</script>
+
+</html>
