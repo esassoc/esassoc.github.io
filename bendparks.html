@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<meta property='og:title' content='Bend Parks and Recreation Proposal App' />
 <!-- Include meta tag to ensure proper rendering and touch zooming -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -12,14 +16,6 @@
 <!-- Include the jQuery Mobile library -->
 <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
-<script type="text/javascript">
-$('input[type=checkbox]').change(function(e){
-   if ($('input[type=checkbox]:checked').length > 3) {
-        $(this).prop('checked', false)
-        alert("allowed only 3");
-   }
-})
-</script>
 <style>
 
 button[type=submit] {
@@ -46,62 +42,61 @@ button[type=submit] {
 </style>
 </head>
 <body>
-	<img src="http://i.imgur.com/ePiXBBt.png?1"
-	<form name= 'form1' form method="post" action="demoform.asp">
-  <label for="fname">First name:</label>
-  <input type="text" name="fname" id="fname">
-  <label for="fname">Last name:</label>
-  <input type="text" name="fname" id="fname">
-  <fieldset data-role="controlgroup">
-    <legend>Choose your gender:</legend>
-      <label for="male">Male</label>
-      <input type="radio" name="gender" id="male" value="male">
-      <label for="female">Female</label>
-      <input type="radio" name="gender" id="female" value="female">
-  </fieldset>
-  <fieldset class="ui-field-contain">
-    <label for="age">Age</label>
-    <select name="age" id="age">
-      <option value="less10">under 10</option>
-      <option value="11to20">11 to 20</option>
-      <option value="21to30">21 to 30</option>
-      <option value="31to50">31 to 50</option>
-      <option value="51to64">51 to 64</option>
-      <option value="greater65">65 and up</option>
-    </select>
-  </fieldset>
-  <fieldset data-role="controlgroup">
-    <legend>In your opinion, which are the 3 most important proposed features on this concept plan?</legend>
-      <label for="bbq">Barbeque</label>
-      <input type="checkbox" name="fav" id="bbq" value="bbq">
-      <label for="bench">Bench</label>
-      <input type="checkbox" name="fav" id="bench" value="bench">
-      <label for="bridge">Bridge</label>
-      <input type="checkbox" name="fav" id="bridge" value="bridge">
-      <label for="dog">Dog Station</label>
-      <input type="checkbox" name="fav" id="dog" value="dog">
-      <label for="drink">Drinking Fountain</label>
-      <input type="checkbox" name="fav" id="drink" value="drink">
-      <label for="kiosk">Kiosk</label>
-      <input type="checkbox" name="fav" id="kiosk" value="kiosk">
-      <label for="restroom">Restroom</label>
-      <input type="checkbox" name="fav" id="restroom" value="restroom">
-      <label for="trailhead">Trailhead</label>
-      <input type="checkbox" name="fav" id="trailhead" value="trailhead">
-  </fieldset>
-  <fieldset data-role="vist">
-    <legend>How likely will you visit the new park?</legend>
-      <label for="unlikely">Unlikely</label>
-      <input type="radio" name="type" id="unlikely" value="unlikely">
-      <label for="likely">Likely</label>
-      <input type="radio" name="type" id="likely" value="likely">
-      <label for="cw">Can't Wait!</label>
-      <input type="radio" name="type" id="cw" value="cw">
-  </fieldset>
-  <label for="info">If unlikely to vist, in 255 characters mind telling us why?:</label>
-<textarea name="visttext" id="visittext"></textarea>
-<input type="submit" value="Submit">
-</form>
+	<img src="http://i.imgur.com/ePiXBBt.png?1">
+	<form action="https://docs.google.com/forms/d/1wmw7m9UxHuY3EcLK8rgQDPoeQcN8SAe3Ijr-ISth8pg/formResponse" method="POST" id="ss-form" target="_self" onsubmit="">
+    <label for="entry_1578211272">First name:</label>
+    <input type="text" name="entry.1578211272" id="entry_1578211272">
+    <label for="entry_359687027">Last name:</label>
+    <input type="text" name="entry.359687027" id="entry_359687027">
+    <fieldset data-role="controlgroup">
+      <legend>Choose your gender:</legend>
+        <label for="group_1063857069_1">Male</label>
+        <input type="radio" name="entry.1063857069" id="group_1063857069_1" value="male">
+        <label for="group_1063857069_2">Female</label>
+        <input type="radio" name="entry.1063857069" id="group_1063857069_2" value="female">
+    </fieldset>
+    <fieldset class="ui-field-contain">
+      <label for="entry_1941153975">Age</label>
+      <select name="entry.1941153975" id="entry_1941153975">
+        <option value="less10">under 10</option>
+        <option value="11to20">11 to 20</option>
+        <option value="21to30">21 to 30</option>
+        <option value="31to50">31 to 50</option>
+        <option value="51to64">51 to 64</option>
+        <option value="greater65">65 and up</option>
+      </select>
+    </fieldset>
+    <fieldset data-role="controlgroup">
+      <legend>In your opinion, which are the 3 most important proposed features on this concept plan?</legend>
+        <label for="group_900045435_1">Barbeque</label>
+        <input type="checkbox" name="entry.900045435" id="group_900045435_1" value="bbq">
+        <label for="group_900045435_2">Bench</label>
+        <input type="checkbox" name="entry.900045435" id="group_900045435_2" value="bench">
+        <label for="group_900045435_3">Bridge</label>
+        <input type="checkbox" name="entry.900045435" id="group_900045435_3" value="bridge">
+        <label for="group_900045435_4">Dog Station</label>
+        <input type="checkbox" name="entry.900045435" id="group_900045435_4" value="dog">
+        <label for="group_900045435_5">Drinking Fountain</label>
+        <input type="checkbox" name="entry.900045435" id="group_900045435_5" value="drink">
+        <label for="group_900045435_6">Kiosk</label>
+        <input type="checkbox" name="entry.900045435" id="group_900045435_6" value="kiosk">
+        <label for="group_900045435_7">Restroom</label>
+        <input type="checkbox" name="entry.900045435" id="group_900045435_7" value="restroom">
+        <label for="group_900045435_8">Trailhead</label>
+        <input type="checkbox" name="entry.900045435" id="group_900045435_8" value="trailhead">
+    </fieldset>
+    <fieldset data-role="vist">
+      <legend>How likely will you visit the new park?</legend>
+        <label for="group_125769818_1">Unlikely</label>
+        <input type="radio" name="entry.125769818" id="group_125769818_1" value="unlikely">
+        <label for="group_125769818_2">Likely</label>
+        <input type="radio" name="entry.125769818" id="group_125769818_2" value="likely">
+        <label for="group_125769818_3">Can't Wait!</label>
+        <input type="radio" name="entry.125769818" id="group_125769818_3" value="cw">
+    </fieldset>
+    <label for="info">If unlikely to vist, in 255 characters mind telling us why?:</label>
+    <textarea name="entry.1076493586" id="entry_1076493586"></textarea>
+    <input type="submit" name="submit" value="Submit" id="ss-submit" class="jfk-button jfk-button-action ">
 </form>
 </body>
 </html>
