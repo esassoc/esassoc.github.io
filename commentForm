@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<head>
+
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+<link rel="stylesheet" href="http://leaflet.github.io/Leaflet.draw/src/leaflet.draw.css"/>
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+<script src="http://leaflet.github.io/Leaflet.draw/src/Leaflet.draw.js"></script>
+<script src="scripts/leaflet.label.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.2/leaflet.draw.js"></script>
+
+<meta property='og:title' content='Energize Eastside EIS Scoping Comments' />
+
+<style>
+#map {
+width:860px;
+height:350px;
+margin-left:auto;
+margin-right:auto;
+
+}
+
+body {
+  text-align:left;
+}
+textarea{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 4px;
+}
+
+::-webkit-input-placeholder {
+   color: #000000;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #000000;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #000000;  
+}
+
+:-ms-input-placeholder {  
+   color: #000000;  
+}
+
+#page{
+	width: 860px;
+	margin: 0 auto;
+}
+
+.notes {
+  padding: 4px; 
+  border: solid 1px #C5C5C5;  
+  outline: 0;  
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;  
+  width: 625px;
+  height:100px;
+  padding-top: 10px;
+}
+select {
+  border: solid 1px #C5C5C5;
+  padding:2.5px;
+  outline: 0;  
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+input:hover, textarea:hover,  
+input:focus, textarea:focus {   
+  border-color: #606060;   
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 8px;
+  padding:4px;
+}
+
+button.submit { 
+	
+	width: 150px;  
+    padding:9px;	
+    background: #777777;  
+    border: 0;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;	
+    font-size: 14px;
+    font-weight: bold;  
+    color: #ffffff;  
+    -moz-border-radius: 5px;  
+    -webkit-border-radius: 5px;
+	float:left;
+	margin-right:5px;
+	cursor:pointer;
+	cursor:hand;
+	border-radius: 5px; 
+  
+}
+
+label {
+  display: block;
+  padding-top:8px;
+  width: 300px;
+  text-align:left;
+  margin-right: 10px;
+}
+
+
+.row {
+	clear: both;
+}
+
+.col3{
+	width: 216px;
+	float: left;
+
+}
+.col3top{
+	width: 216px;
+	float: left;
+}
+
+.col1{
+	width: 860px;
+	float: left;
+	padding-top:10px;
+}
+.col1_1{
+	width: 860px;
+	float: left;
+	padding-top: 30px;
+
+}
+ul.a {
+    list-style-type: circle;
+    text-align:left;
+    position: relative;
+    right: -50px;
+}
+ul.b {
+    list-style-type: square;
+    text-align:left;
+    position: relative;
+    padding-left: 30px; 	
+}
+li.a{
+	padding-top:5px;
+}
+a{
+	color:#F04C23;
+
+}
+#entry_987744006{
+	width:350px;
+}
+#entry_2097859402{
+	width:200px;
+}
+
+</style>
+</head>
+
+<body>
+<div id='page'>
+		<h2 class="wsite-content-title" style="text-align:left;">Phase 2 Draft EIS Comment Form</h2>
+		<strong><font color="#70451c">We want to hear from you!</font></strong> 
+	<br>
+	<p>
+		The comment period for the Phase 2 Draft EIS is now open. Submitting comments through the EIS process is the best way to communicate your ideas or concerns on the project.
+	</p>
+	<br>
+	<p>
+		The form below allows you to submit written comments. The form includes an interactive map that you can use to pinpoint a location-specific comment. The interactive map shows the action alternatives studied in the Phase 2 Draft EIS, divided into six segments.  If you click on a segment, a window will pop-up that identifies the segment name and any corresponding alternative alignments (or “options”). Learn more about the action alternatives studied in the Phase 2 Draft EIS <a href="http://www.energizeeastsideeis.org/phase-2-draft-eis.html">here</a>.
+	</p>
+	<br>
+	<strong><font color="#70451c">Instructions</font></strong> 
+	<p>
+		Fill out the required fields in the form, which are noted with an asterisk (*). If your comment is not location-specific or you don’t want to attach additional documentation, simply click submit. A confirmation page will appear letting you know your comment has been successfully submitted. 
+	</p>
+	<br>
+	<p>
+		If your comment pertains to a specific location, you can indicate the location using the interactive map before you click submit. To do so, <b>click the pin button in the top right corner of the map, then click a point on the map to add the pin</b>. If you want to move your pin after it is placed, click the edit icon in the top right corner, then click+hold+drag your pin to the new location, then click save. Only one pin can be associated with a specific comment, so if you have comments about more than one location, please submit an additional comment for each location.
+	</p>
+	<br>
+	<p>
+		If you have documentation you would like to attach to your comment, you will need to send the attachment to <a href="mailto:info@energizeeastsideEIS.org">info@EnergizeEastsideEIS.org</a>. Be sure to mention in your comment that you are emailing an attachment. When you send the email, include your first and last name and physical mailing address. 
+	</p>
+	<br>
+	<p>
+		This form requires you to provide your physical mailing address. Submitting your physical mailing address with your comment makes you a “party of record.” Being a party of record is necessary for any appeals to the adequacy of the EIS.If you do not want to provide your physical mailing address when you submit your comment, please email your comment to <a href="mailto:info@energizeeastsideEIS.org">info@EnergizeEastsideEIS.org</a>.  If you do not provide your physical mailing address you will not be considered a “party of record,” but your comment will still be responded to in the Final EIS.
+	</p>
+	<br>
+
+<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"     
+onload="if(submitted) {window.location='http://www.energizeeastsideeis.org/confirmation.html';}"></iframe>
+
+	<form action="https://docs.google.com/a/energizeeastsideeis.org/forms/d/e/1FAIpQLSeFB9jnfH4yJ1BUQxcM7v7pAtWLiAMsra6eIxbJgOe4JB4YDg/formResponse" method="POST" id="ss-form" target="hidden_iframe" onsubmit="submitted=true;">
+				<div class="col3top">
+					<label for="firstname"><strong><font color="#70451c">First Name</font></strong><a>*</a></label>
+					<input id="entry_1247160363" placeholder="e.g. Henry" type="text" name="entry.1247160363" class='ss-q-short' dir="auto" required></input>
+				</div>
+				<div class="col3top">
+					<label for="lastname"><strong><font color="#70451c">Last Name</font></strong><a>*</a></label>
+					<input id="entry_2145320070" placeholder="e.g. Yesler" type="text" name="entry.2145320070" class='ss-q-short' dir="auto" required></input>
+				</div>
+				<div class="col3top">
+					<label for="email"><strong><font color="#70451c">Email</font></strong></label>
+					<input id="entry_732590928" placeholder="e.g. email@email.com" type="text" name="entry.732590928" class='ss-q-short' dir="auto"></input>
+				</div>	
+
+			<div class="row">
+				<div class="col3">
+					<label for="address"><strong><font color="#70451c">Address</font></strong><a>*</a></label>
+					<input id="entry_319134438" placeholder="e.g. 1111 Yesler Way" type="text" name="entry.319134438" class='ss-q-short' dir="auto" required></input>
+				</div>
+				<div class="col3">
+					<label for="city"><strong><font color="#70451c">City</font></strong><a>*</a></label>
+					<input type="text" id="entry_1647963291" placeholder="e.g. Seattle"name="entry.1647963291" class='select' required></input>
+				</div>
+				<div class="col3">
+					<label for="zip"><strong><font color="#70451c">Zip</font></strong><a>*</a></label>
+					<input type="text" id="entry_2040199952" placeholder="e.g. 98103" name="entry.2040199952" class='select' required></input>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col1_1">
+					<label for="type"><strong><font color="#70451c">What category best fits your comment?</font></strong></label>
+					<select id="entry_987744006" name="entry.987744006"><br>
+						<option selected>-Please Select-</option>
+						<option value="Project Alternatives">Project Alternatives</option>
+						<option value="Land Use & Housing"> Land Use & Housing</option>
+						<option value="Scenic Views & the Aesthetic Environment">Scenic Views & the Aesthetic Environment</option>	
+						<option value="Water Resources">Water Resources</option>
+						<option value="Plants & Animals">Plants & Animals</option>
+						<option value="Greenhouse Gases">Greenhouse Gases</option>
+						<option value="Recreation">Recreation</option>
+						<option value="Historic & Cultural Resources">Historic & Cultural Resources</option>
+						<option value="Environmental Health - Electric & Magnetic Fields">Environmental Health - Electric & Magnetic Fields</option>
+						<option value="Environmental Health - Pipeline Safety">Environmental Health - Pipeline Safety</option>
+						<option value="Economics">Economics</option>
+						<option value="Other">Other</option>
+
+					</select>
+				</div>
+				<div class="col1">
+					<label for="comment"><strong><font color="#70451c">Comment</font></strong><a>*</a></label>
+					<textarea id="entry_468328249" placeholder="Enter your comment here" name="entry.468328249" class='notes' required></textarea>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col1_1">
+					<label for="updates"><strong><font color="#70451c">Would you like to receive project updates?</font></strong></label>
+					<select id="entry_2097859402" name="entry.2097859402" class='select'><br>
+						<option selected>-Please Select-</option>
+						<option value="Email">Yes, Email me</option>
+						<option value="Post">Yes, I prefer standard post</option>
+						<option value="No">No thanks</option>	
+					</select>
+				</div>
+			<div class ="row">
+			<br>
+			</div>
+			<div id="map"></div>
+			<div class ="row">
+				<div class="col1_1">
+				<button onclick="initialize();" class="submit" value="submit" id="submit file" >Submit</button>	
+				</div>
+			</div>
+	</div>
+<input type="hidden" name="entry.1843466499" id="entry_1843466499">
+<input type="hidden" name="entry.2095728529" id="entry_2095728529">		
+</form>
+
+<script>
+
+// Creat variable for Mapbox tiles
+var mapboxTiles = L.tileLayer('http://a.tiles.mapbox.com/v3/kempj2.hb8f15f5/{z}/{x}/{y}.png', {
+    attribution: '<a href="https://www.mapbox.com/" target="_blank">Mapbox</a>'
+});
+//Initialize the map
+var map = L.map('map')
+    .addLayer(mapboxTiles)
+    .setMaxBounds([
+    [47.863392, -121.88737],
+    [47.406250, -122.420934]
+])
+    .setView([47.594009,-122.124882], 10);
+
+// define rectangle geographical bounds
+var alignment = {"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+                                                                                                                                  
+"features": [
+{ "type": "Feature", "properties": { "Segment": "Bellevue North", "Option": "None", "PSE_SeG": 1 }, "geometry": { "type": "LineString", "coordinates": [ [ -122.15820186399648, 47.660479223585007 ], [ -122.15822752141433, 47.659258816219349 ], [ -122.15828466531813, 47.657354059677381 ], [ -122.15829892005401, 47.655978187428133 ], [ -122.15834985455064, 47.654382917767613 ], [ -122.15839739006989, 47.652654401050384 ], [ -122.15844565857935, 47.65067834363478 ], [ -122.158481164335, 47.649030890503198 ], [ -122.15854533786937, 47.646849957674178 ], [ -122.15857536474155, 47.645540544470251 ], [ -122.15860467004718, 47.64392648472441 ], [ -122.15865521952378, 47.642316937821917 ], [ -122.15869945219836, 47.640736025707668 ], [ -122.15873883098867, 47.638964760650751 ], [ -122.15878403517944, 47.637145825299896 ], [ -122.15883432995588, 47.635526760340632 ], [ -122.15933374958757, 47.634121435636537 ], [ -122.15931289401767, 47.632474637421467 ], [ -122.15931886154762, 47.631051257737205 ], [ -122.15931536653878, 47.629256689886745 ], [ -122.15931370012723, 47.628097167258375 ] ] } },
+{ "type": "Feature", "properties": { "Segment": "Bellevue Central", "Option": "Bypass 1 | Existing Corridor", "PSE_SeG": 1 }, "geometry": { "type": "LineString", "coordinates": [ [ -122.15850892572875, 47.600707265501697 ], [ -122.15847379154856, 47.599538816980335 ], [ -122.15846350947271, 47.598582129023526 ], [ -122.15842111335546, 47.596640445946733 ], [ -122.15838525339757, 47.595231833310379 ], [ -122.15834673931768, 47.593442432546759 ], [ -122.1583156077005, 47.592219414058619 ], [ -122.15827672551713, 47.590691830608947 ], [ -122.15827242129861, 47.588863949367166 ], [ -122.15820297439896, 47.58751761094134 ], [-122.1582162,47.58724128]  ] } },
+
+{ "type": "Feature", "properties": { "Segment": "Bellevue Central", "Option": "Bypass 1 | Bypass 2 | Existing Corridor", "PSE_SeG": 1 }, "geometry": { "type": "LineString", "coordinates": [ [-122.1582162,47.58724128], [ -122.15812029046975, 47.586756935949005 ], [ -122.15830173175512, 47.586421605770639 ], [ -122.15822279283644, 47.586084548415535 ], [ -122.15804223165962, 47.58562490848297 ] ] } },
+
+{ "type": "Feature", "properties": { "Segment": "Bellevue South", "Option": "Willow 1 | Willow 2 | Oak 1 | Oak 2", "PSE_SeG": 2 }, "geometry": { "type": "LineString", "coordinates": [ [ -122.15804223165962, 47.58562490848297 ], [ -122.15803678256353, 47.585410761238769 ], [ -122.15793981698059, 47.584088544418989 ], [ -122.15781451552883, 47.581928855661666 ], [ -122.15772022518317, 47.580711332812726 ], [ -122.15762304712938, 47.579103504031089 ], [ -122.15755326695037, 47.577742888543369 ], [ -122.15743282347262, 47.576049646305982 ], [ -122.15736293135164, 47.574684271823656 ], [ -122.15727412403407, 47.573404801837746 ], [ -122.15719174825044, 47.572101455745845 ], [ -122.15717567839798, 47.571469342003319 ] ] } },
+{ "type": "Feature", "properties": { "Segment": "Bellevue South", "Option": "Willow 1 | Willow 2 | Oak 1 | Oak 2", "PSE_SeG": 2 }, "geometry": { "type": "LineString", "coordinates": [ [ -122.15717567839798, 47.571469342003319 ], [ -122.15717493191553, 47.571439978464412 ], [ -122.15704760451636, 47.56975157640472 ], [ -122.1577496189187, 47.568591423646673 ], [ -122.15849815817342, 47.567325998658767 ], [ -122.15947687796734, 47.565710386105891 ], [ -122.16031261489287, 47.564282082802002 ], [ -122.16118333878183, 47.562848603922113 ], [ -122.16203231586132, 47.561391570753621 ], [ -122.1627408941229, 47.560221787282337 ], [ -122.16389386897045, 47.558280398853007 ], [ -122.16456855072788, 47.557163362448335 ], [ -122.16569837816462, 47.555248696964235 ] ] } },
+{ "type": "Feature", "properties": { "Segment": "Bellevue South", "Option": "Willow 2", "PSE_SeG": 2 }, "geometry": { "type": "LineString", "coordinates": [ [ -122.15717493191553, 47.571439978464412 ], [ -122.15780490737427, 47.571404874028111 ], [ -122.15800586635923, 47.571354930636772 ], [ -122.15848749824934, 47.571277914988592 ], [ -122.15918524241948, 47.571055570317704 ], [ -122.15988525361065, 47.570922449362627 ], [ -122.16064618384364, 47.57076481173177 ], [ -122.16118675677687, 47.570585941334606 ], [ -122.16189206814045, 47.570661006625784 ], [ -122.16230490228455, 47.570989399197856 ], [ -122.1627694183302, 47.57127553394573 ], [ -122.16310966431395, 47.571515517806738 ], [ -122.16326697257965, 47.571477976158207 ], [ -122.16419351405651, 47.570919707045888 ], [ -122.16446201777026, 47.570416738203477 ], [ -122.16477522531089, 47.569942996732351 ], [ -122.16489977020433, 47.569655923479289 ], [ -122.16508584108058, 47.569368129449273 ], [ -122.16533008964065, 47.568948746768413 ], [ -122.16531536637098, 47.568716857223023 ], [ -122.16546566509511, 47.568405680333747 ], [ -122.16608244946349, 47.568457955300502 ], [ -122.16656678380045, 47.568487978882104 ], [ -122.16709476137201, 47.568505587830842 ], [ -122.16761410223398, 47.568529245997603 ], [ -122.1681946649679, 47.568540282426092 ], [ -122.16889492442755, 47.568419003051098 ], [ -122.1697355355026, 47.567951717068169 ] ] } },
+{ "type": "Feature", "properties": { "Segment": "Bellevue South", "Option": "Oak 1 | Oak 2", "PSE_SeG": 2 }, "geometry": { "type": "LineString", "coordinates": [ [ -122.1697487, 47.567812119983195 ], [ -122.1696843399999, 47.56849458998326 ], [ -122.16965575, 47.569584009983267 ], [ -122.16966113, 47.570409099983252 ], [ -122.16966683, 47.571283679983317 ], [ -122.16969142, 47.572197569983302 ], [ -122.16969374, 47.572985769983291 ], [ -122.16969975, 47.574131759983246 ], [ -122.16969461000002, 47.574693439983214 ], [ -122.16968789, 47.575652939983271 ], [ -122.16968032, 47.576452039983266 ], [ -122.16965020000005, 47.577112909983263 ], [ -122.1696671, 47.578051409983232 ], [ -122.169019, 47.578645179983269 ], [ -122.16865811, 47.579791569983264 ], [ -122.16856065000003, 47.580786309983282 ], [ -122.1685485099999, 47.581753689983259 ], [ -122.1676014899999, 47.58185403998332 ], [ -122.16741059, 47.582152689983253 ], [ -122.1667870099999, 47.583067379983291 ], [ -122.16625083, 47.58362683998336 ], [ -122.1661168699999, 47.583892229983348 ], [ -122.16542762999988, 47.583869029983283 ], [ -122.16400487000001, 47.583852449983262 ], [ -122.16303436000001, 47.583845669983361 ], [ -122.16166968, 47.583836119983253 ], [ -122.16042793, 47.583828299983217 ], [ -122.15906938, 47.583814119983238 ], [ -122.15821881087925, 47.586283768790047 ] ] } },
+{ "type": "Feature", "properties": { "Segment": "Bellevue South", "Option": "Oak 2", "PSE_SeG": 2 }, "geometry": { "type": "LineString", "coordinates": [ [ -122.16968032000031, 47.576452039983231 ], [ -122.17019458000031, 47.576339309983219 ], [ -122.1711912100003, 47.576659299983241 ], [ -122.17219313000031, 47.576980969983239 ], [ -122.17310220000032, 47.577272819983222 ], [ -122.17354755000031, 47.577326609983238 ], [ -122.17373683342352, 47.576835203989759 ], [ -122.17396550508518, 47.575880457234582 ], [ -122.17436147606884, 47.574866613979118 ], [ -122.17436509414668, 47.57391452007446 ], [ -122.17434352465891, 47.573076969357672 ], [ -122.17437674179409, 47.572181649429318 ], [ -122.1743764377872, 47.571077273545782 ], [ -122.17443336833216, 47.570010304642125 ], [ -122.17443551414777, 47.569001104955525 ], [ -122.17438729001361, 47.568220991691064 ], [ -122.17444813873607, 47.567306304707969 ], [ -122.17447855003485, 47.566360943247545 ] ] } },
+{ "type": "Feature", "properties": { "Segment": "Redmond", "Option": "None", "PSE_SeG": 1 }, "geometry": { "type": "LineString", "coordinates": [ [ -122.14987561895302, 47.684758565477871 ], [ -122.14988403392378, 47.68397779289262 ], [ -122.14992063713625, 47.683196694592667 ], [ -122.15355888450293, 47.683230763568552 ], [ -122.15621102402491, 47.683295209558764 ], [ -122.15841069741558, 47.683307733613894 ], [ -122.15855218863439, 47.681116384558557 ], [ -122.15842543152564, 47.678356927824019 ], [ -122.15838414110972, 47.677843303612377 ], [ -122.15832653246176, 47.676689618741399 ], [ -122.15829425954259, 47.675423773863045 ], [ -122.15837007640563, 47.675080155834834 ], [ -122.15835757059961, 47.674866091082677 ], [ -122.15837847470978, 47.674580234370318 ], [ -122.1583645130562, 47.674309063827344 ], [ -122.15837903945439, 47.672114430279684 ], [ -122.15822739811794, 47.669759881429549 ], [ -122.15810150405352, 47.66786201475162 ], [ -122.15808806190385, 47.666781599383327 ], [ -122.15812835055469, 47.664491461145452 ], [ -122.15815756913842, 47.662596550389708 ], [ -122.15819248575878, 47.660925303952162 ], [ -122.15820186399648, 47.660479223585007 ] ] } },
+{ "type": "Feature", "properties": { "Segment": "Renton", "Option": "None", "PSE_SeG": 3 }, "geometry": { "type": "LineString", "coordinates": [ [ -122.16895433477679, 47.517826273944713 ], [ -122.16895031490235, 47.517699463241229 ], [ -122.1688812547042, 47.515415354818742 ], [ -122.17004407126117, 47.514316338593041 ], [ -122.17099107389521, 47.51343406321854 ], [ -122.1724000650723, 47.512075068483981 ], [ -122.17389161617159, 47.510650817494579 ], [ -122.17589808934083, 47.508763475187081 ], [ -122.17586120189701, 47.506921691360617 ], [ -122.17579155209596, 47.505444454621554 ], [ -122.17576490340811, 47.504409413555564 ], [ -122.17572796456281, 47.502974632498983 ], [ -122.17568178025977, 47.501589943475466 ], [ -122.17564374320541, 47.500112333150298 ], [ -122.17558519308051, 47.498656386511009 ], [ -122.17555751009776, 47.497171513477504 ], [ -122.17551415204055, 47.495486894983507 ], [ -122.17546099934938, 47.493830953868191 ], [ -122.1753980528695, 47.492203690117215 ], [ -122.17557752056757, 47.490580701012199 ], [ -122.1757522002677, 47.488772118125674 ], [ -122.1758378528309, 47.488007084015486 ], [ -122.1774999189999, 47.486280863828568 ], [ -122.17896677024594, 47.484749722862915 ], [ -122.18024897034618, 47.483413543723202 ], [ -122.18156214085694, 47.482055560319786 ], [ -122.18272173091076, 47.480870756330845 ], [ -122.18390084858525, 47.479628584361592 ], [ -122.18352622071959, 47.478583403004755 ], [ -122.1819502862422, 47.474253638953044 ], [ -122.18149724373275, 47.473023733489796 ], [ -122.18277206257154, 47.472637282124417 ], [ -122.18422842385607, 47.472348620965782 ], [ -122.18679275591798, 47.471739695461523 ], [ -122.18919911365521, 47.471132598804289 ], [ -122.1913845236088, 47.470535235125041 ], [ -122.19217111193203, 47.470411572907182 ], [ -122.1917570631818, 47.469473995865243 ], [ -122.19235358608285, 47.469331185942195 ], [ -122.19318058854576, 47.469142768792388 ], [ -122.19301311775796, 47.468373611074242 ] ] } },
+{ "type": "Feature", "properties": { "Segment": "Newcastle", "Option": "None", "PSE_SeG": 3 }, "geometry": { "type": "LineString", "coordinates": [ [ -122.16957395858536, 47.539878636561852 ], [ -122.16956822180528, 47.539748823077673 ], [ -122.16953592922704, 47.538078354366796 ], [ -122.1694845703517, 47.536486654027421 ], [ -122.16945466177937, 47.534908982226291 ], [ -122.16940294248724, 47.533303005401898 ], [ -122.1693375016572, 47.531161661626527 ], [ -122.16929157162767, 47.529369966957027 ], [ -122.16925003603326, 47.527749589696981 ], [ -122.16916031043816, 47.525894146660107 ], [ -122.1691416156451, 47.523930762776978 ], [ -122.16907773251994, 47.522260665736788 ], [ -122.16900529710304, 47.519433928253186 ], [ -122.16895433477679, 47.517826273944713 ] ] } },
+{ "type": "Feature", "properties": { "Segment": "Bellevue South", "Option": "Willow 1 | Willow 2 | Oak 1 | Oak 2", "PSE_SeG": 3 }, "geometry": { "type": "LineString", "coordinates": [ [ -122.16569837816462, 47.555248696964235 ], [ -122.16574804822955, 47.555164519996133 ], [ -122.16767707358802, 47.551959664995415 ], [ -122.16831207818177, 47.550809748466214 ], [ -122.16920258961864, 47.549342648659568 ], [ -122.16984064174346, 47.548314073420585 ], [ -122.16977414279604, 47.546544041593329 ], [ -122.16973726197047, 47.54469511732897 ], [ -122.16967710244363, 47.542760782279181 ], [ -122.16964359933036, 47.541454487057024 ], [ -122.16957395858536, 47.539878636561852 ] ] } },
+{ "type": "Feature", "properties": { "Segment": "Bellevue Central", "Option": "Existing Corridor", "PSE_SeG": 1 }, "geometry": { "type": "LineString", "coordinates": [ [ -122.15931370012723, 47.628097167258375 ], [ -122.15931284221212, 47.627500192525126 ], [ -122.15931480235334, 47.626195865208885 ], [ -122.15930754369859, 47.624529867335589 ], [ -122.15933001810384, 47.62292540606996 ], [ -122.1593262920414, 47.620293038972761 ], [ -122.15932850170289, 47.618446041558101 ], [ -122.15933823069949, 47.616894091114389 ], [ -122.15933085131394, 47.615223334033232 ], [ -122.15927797206076, 47.613424580660578 ], [ -122.15920289288877, 47.611583243765395 ], [ -122.15916312143686, 47.610022349411132 ], [ -122.15910685850477, 47.608090348664099 ], [ -122.15903567778305, 47.60612520001046 ], [ -122.15898850980778, 47.604826204764279 ], [ -122.15897772107361, 47.604402669332003 ], [ -122.15892825895467, 47.602737162488886 ], [ -122.15851972211472, 47.601066318172514 ], [ -122.15850892572875, 47.600707265501697 ] ] } },
+{ "type": "Feature", "properties": { "Segment": "Bellevue Central", "Option": "Bypass 1 | Bypass 2", "PSE_SeG": 1 }, "geometry": { "type": "LineString", "coordinates": [ [ -122.16791172756879, 47.59875197170129 ], [ -122.16946672238504, 47.599697669863538 ], [ -122.17123285109729, 47.600640864728035 ], [ -122.17304538282761, 47.601333573231621 ], [ -122.17426644977631, 47.601604803175078 ], [ -122.1752828892993, 47.602128347346955 ], [ -122.1759419198266, 47.603120225863556 ], [ -122.17680745977923, 47.603931152939545 ], [ -122.17760734615926, 47.604243022412852 ], [ -122.17883127345434, 47.604621276467874 ], [ -122.18041539545131, 47.604638234068815 ], [ -122.18231338268886, 47.604544342879201 ], [ -122.18279019214606, 47.604610092625776 ], [ -122.18355401959447, 47.605564984124953 ], [ -122.18415677023773, 47.606414677290623 ], [ -122.18444010514256, 47.607161054841903 ], [ -122.18446697897893, 47.608196093273811 ], [ -122.18438459143049, 47.609089621120766 ], [ -122.18408460109112, 47.609735818292094 ], [ -122.18363274926318, 47.610633730579771 ], [ -122.18232807009184, 47.611220436524128 ], [ -122.18074929234335, 47.611417651598124 ], [ -122.18028258586816, 47.611744494434184 ], [ -122.18026479381443, 47.615136389872411 ], [ -122.18028038250976, 47.617778149169581 ], [ -122.17840866773923, 47.618907046026614 ], [ -122.1755811454953, 47.619832976134042 ], [ -122.17326946968008, 47.620288638355987 ], [ -122.16707143921909, 47.621575302697309 ], [ -122.16434002193557, 47.622142805106833 ], [ -122.16438693989836, 47.628104458237253 ], [ -122.15931369220279, 47.628091653155302 ] ] } },
+{ "type": "Feature", "properties": { "Segment": "Bellevue Central", "Option": "Bypass 2", "PSE_SeG": 1 }, "geometry": { "type": "LineString", "coordinates": [ [ -122.15817459588737, 47.587256537036083 ], [ -122.16429622177721, 47.587405443678826 ], [ -122.16429639104767, 47.589476148051773 ], [ -122.16422646205974, 47.590869337745787 ], [ -122.16448130937795, 47.592580043648297 ], [ -122.16477159035473, 47.593611999550717 ], [ -122.1655858621121, 47.594495011962152 ], [ -122.16649929054235, 47.595126943914813 ], [ -122.16738467546435, 47.596723147714165 ], [ -122.16794710610512, 47.59807322138532 ], [ -122.16805137766012, 47.598836904698508 ] ] } },
+{ "type": "Feature", "properties": { "Segment": "Bellevue Central", "Option": "Bypass 1", "PSE_SeG": 1 }, "geometry": { "type": "LineString", "coordinates": [ [ -122.15848243828418, 47.599826384144613 ], [ -122.159652685941, 47.599848208791364 ], [ -122.16020766359712, 47.59884208717957 ], [ -122.16113380719054, 47.597903034692408 ], [ -122.16276045762035, 47.597527019265591 ], [ -122.164711896505, 47.597468496177534 ], [ -122.16593008793933, 47.597632742159739 ], [ -122.16791172756879, 47.59875197170129 ] ] } },
+{ "type": "Feature", "properties": { "Segment": "Bellevue South", "Option": "Oak 1 | Oak 2 | Willow 2", "PSE_SeG": 2 }, "geometry": { "type": "LineString", "coordinates": [ [ -122.16574804822955, 47.555164519996168 ], [ -122.16555392890217, 47.55629244229138 ], [ -122.16548554972381, 47.556918204954584 ], [ -122.16559011298158, 47.557452240093291 ], [ -122.16599105, 47.557837599983273 ], [ -122.16698389, 47.558364629983231 ], [ -122.1679878, 47.55886607998319 ], [ -122.16908197000004, 47.559291429983226 ], [ -122.16903389, 47.559983089983227 ], [ -122.16905586, 47.560820669983173 ], [ -122.16909043, 47.561676999983256 ], [ -122.16925858, 47.562549529983208 ], [ -122.16983048, 47.56319609998318 ], [ -122.17046179000002, 47.563970079983278 ], [ -122.17096093, 47.564678649983257 ], [ -122.1713060899999, 47.564989079983206 ], [ -122.1703207099999, 47.56566048998323 ], [ -122.17014682, 47.566142769983188 ], [ -122.1699516399999, 47.566684099983192 ], [ -122.16986317000001, 47.567175869983252 ], [ -122.1697487, 47.567812119983195 ] ] } },
+{ "type": "Feature", "properties": { "Segment": "Bellevue Central", "Option": "Bypass 2", "PSE_SeG": 1 }, "geometry": { "type": "LineString", "coordinates": [ [ -122.1593106, 47.62320751 ], [ -122.1643424, 47.62214692 ] ] } }
+]};
+
+var substations = {"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+                                                                                                                                  
+"features": [
+{ "type": "Feature", "properties": { "Id": 0, "Type": "Lakeside (Existing) | Richards Creek (New)" }, "geometry": { "type": "Point", "coordinates": [ -122.15830487521981, 47.586274645920888 ] } },
+{ "type": "Feature", "properties": { "Id": 0, "Type": "Sammamish" }, "geometry": { "type": "Point", "coordinates": [ -122.14964588398587, 47.685276715176713 ] } },
+{ "type": "Feature", "properties": { "Id": 0, "Type": "Talbot Hill" }, "geometry": { "type": "Point", "coordinates": [ -122.19146434504844, 47.468146814042925 ] } }
+]};
+
+//Add popup functionality to the layer
+function onEachFeature1(feature, layer) {
+    {
+        layer.bindPopup("<b>Segment:</b> " +feature.properties.Segment + "<br><b>Option(s):</b> " + feature.properties.Option);
+    }
+}
+function onEachFeature2(feature, layer) {
+    {
+        layer.bindPopup("<b>Substation:</b> " +feature.properties.Type);
+    }
+}
+// Style alignment GeoJSON based on the attribute fields
+L.geoJson(alignment, {color: "#FF0000", opacity:1}).addTo(map);
+L.geoJson(alignment, { onEachFeature:onEachFeature1,
+    style: function(feature) {
+        switch (feature.properties.Segment) {
+            //case 'Bellevue South': return {color: "#ABB14F", opacity: 1};
+            case 'Redmond': return {color: "#F1BF58", opacity: 1};
+            case 'Bellevue North': return {color: "#F04D24", opacity: 1};
+            case 'Newcastle': return {color: "#455C89", opacity: 1};
+            case 'Renton': return {color: "#9950A4", opacity: 1};
+            //case 'Bellevue Central': return {color: "#7c481f", opacity: 1};
+        }
+        switch(feature.properties.Option){
+        	case 'Existing Corridor': return {color: "#7C481F", opacity: 1};
+        	case 'Bypass 1 | Existing Corridor': return {color: "#70411C", opacity: 1};
+        	case 'Bypass 1': return {color: "#B09077", opacity: 1};
+        	case 'Bypass 2': return {color: "#A37E61", opacity: 1};
+        	case 'Bypass 1 | Bypass 2': return {color: "#643A19", opacity: 1};
+        	case 'Bypass 1 | Bypass 2 | Existing Corridor': return {color: "#895A35", opacity: 1};
+
+        	case 'Willow 1 | Willow 2 | Oak 1 | Oak 2': return {color: "#ABB14F", opacity: 1};
+        	case 'Willow 2': return {color: "#9A9F47", opacity: 1};	
+        	case 'Oak 1 | Oak 2': return {color: "#898D3F", opacity: 1};	
+        	case 'Oak 2': return {color: "#C3C985", opacity: 1};
+        	case 'Oak 1 | Oak 2 | Willow 2': return {color: "#CBD197", opacity: 1};		
+        }
+    }
+}).addTo(map);
+//add substations
+var geojsonMarkerOptions = {
+    radius: 11,
+    fillColor: "#000000",
+    color: "#ffffff",
+    weight: 1,
+    opacity: 1,
+    fillOpacity: 0.8
+};
+
+var station = L.geoJson(substations, { onEachFeature:onEachFeature2,
+    pointToLayer: function (feature, latlng) {
+        return L.circleMarker(latlng, geojsonMarkerOptions );
+    }
+}); var MyCustomMarker = L.Icon.extend({
+        options: {
+            shadowUrl: null,
+            iconAnchor: new L.Point(12, 12),
+            iconSize: new L.Point(24, 24),
+            iconUrl: 'link/to/image.png'
+        }
+    });
+station.addTo(map)
+//Initialize the FeatureGroup to store editable layers
+var drawnItems = new L.FeatureGroup();
+map.addLayer(drawnItems);
+
+var MyCustomMarker = L.Icon.extend({
+        options: {
+            shadowUrl: null,
+            iconAnchor: new L.Point(12, 12),
+            iconSize: new L.Point(24, 24),
+            iconUrl: 'link/to/image.png'
+        }
+    });
+
+// Initialise the draw control and pass it the FeatureGroup of editable layers
+var options = {
+	position: 'topright',
+	draw: {
+		polygon: false,
+		polyline: false,
+		rectangle: false,
+		circle: false,
+		},
+		
+    edit: {
+        featureGroup: drawnItems,
+        edit:false,
+        remove:false
+    	}
+
+};
+var drawnControl = new L.Control.Draw({
+	position: 'topright',
+	draw: {
+		polygon: false,
+		polyline: false,
+		rectangle: false,
+		circle: false,
+		marker:false,
+		},
+		
+    edit: {
+        featureGroup: drawnItems,
+        remove:false
+    	}
+
+});
+var drawControl = new L.Control.Draw(options);
+map.addControl(drawControl);
+
+// adds drawn points to the drawnItems layer
+map.on('draw:created', function (e) {
+        var type = e.layerType,
+            layer = e.layer;
+		drawnItems.addLayer(layer);
+		map.removeControl(drawControl);
+		map.addControl(drawnControl);
+
+	});
+
+//the initialize funcction loades the lat/long from the drawn item
+	function initialize(){
+		$.each( drawnItems._layers, function( key, value ) {
+  		var _lat =  drawnItems._layers[key]._latlng.lat;
+  		var _lng =  drawnItems._layers[key]._latlng.lng;
+		document.getElementById("entry_1843466499").value = _lat;
+		document.getElementById("entry_2095728529").value = _lng;
+	});
+}
+					
+//for changing the thank-you page
+var submitted=false
+ 
+// This function will be called after the Google Script has executed
+  function fileUploaded(status) {
+    document.getElementById('ss-form').style.display = 'none';
+    document.getElementById('output').innerHTML = status;
+  }
+  
+</script>
+
+</html>
